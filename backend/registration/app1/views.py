@@ -37,6 +37,8 @@ def LoginPage(request):
         else:
             return HttpResponse('password is incorrect!!!')
         
+    return render(request,'login.html')
+
 def LogoutPage(request):
     logout(request)
     return redirect('login')
